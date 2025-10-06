@@ -78,5 +78,22 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// About Us page
+app.get("/about", async (req, res) => {
+  try {
+    res.json({
+      bio: `Hi, I'm Xiaomin and I'm a senior at NYU studying CS and Math. Some fun facts about me are that I was born in Spain, grew up in Queens, and am the youngest of 6. I like cooking, walking around the city, and learning new things.`,
+      photo: '/xiaomin.jpg',
+      status: 'all good',
+    })
+  } catch (err) {
+    console.error(res)
+    res.status(500).json({
+      error: err,
+      status: 'failed to load the "About Us" page',
+    })
+  }
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!

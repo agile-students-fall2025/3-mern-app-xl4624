@@ -1,0 +1,19 @@
+.About {
+  text-align: center;
+  padding: 2vmin;
+  max-width: 85vmin;
+  margin: 0 auto;
+}
+
+.About img {
+  width: 25vmin;
+  height: 25vmin;
+  object-fit: cover;
+  margin-bottom: 2vmin;
+}
+
+.About p {
+  font-size: calc(10px + 1vmin);
+  line-height: 1.6;
+}
+
